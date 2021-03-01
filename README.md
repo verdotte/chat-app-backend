@@ -1,6 +1,6 @@
 
 [![Build Status](https://travis-ci.org/verdotte/chat-app-backend.svg?branch=develop)](https://travis-ci.org/verdotte/chat-app-backend)
-[![Coverage Status](https://coveralls.io/repos/github/verdotte/chat-app-backend/badge.svg?branch=develop)](https://coveralls.io/github/verdotte/chat-app-backend?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/verdotte/chat-app-backend/badge.svg)](https://coveralls.io/github/verdotte/chat-app-backend)
 
 # Chat App Backend
 
