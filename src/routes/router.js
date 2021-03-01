@@ -5,6 +5,8 @@ import {
   HTTP_SERVER_ERROR,
 } from '../constants/httpStatusCodes';
 
+import Response from '../helpers/response';
+
 /**
  * Extract posted data from request body
  * @param req
