@@ -30,10 +30,10 @@ class ChatController {
    */
   async send(req, res, param, body) {
     body = JSON.parse(body);
-    const { id, username } = await checkUser(req, res);
     const { message, receiverId } = body;
 
     try {
+      const { id, username } = await checkUser(req, res);
       const chat = await Chat.saveChat([message, id, receiverId]);
       notifier(username, chat, io.get());
       return Response.success(res, HTTP_OK, 'success', chat);
