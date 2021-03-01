@@ -8,7 +8,7 @@
     "dev": "babel-watch src/index.js",
     "create-tables": "babel-node src/database/connection createAllTables",
     "drop-tables": "babel-node src/database/connection dropAllTables",
-    "setup": "npm-run-all create-dev-tables",
+    "prestart": "npm-run-all create-tables",
     "start": "babel-node src/index.js",
     "pretest": "cross-env NODE_ENV=test npm-run-all drop-tables && cross-env NODE_ENV=test npm-run-all create-tables",
     "test": "cross-env NODE_ENV=test jest --coverage --runInBand --detectOpenHandles --forceExit"
