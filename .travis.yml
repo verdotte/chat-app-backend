@@ -9,4 +9,4 @@ before_script:
   - npm install
   - psql -c 'create database test_chat_db;' -U postgres
 after_script:
-  - npm install coveralls && npm run coverage
+  - npm run coveralls
