@@ -5,6 +5,6 @@ module.exports = {
   },
   chatData: {
     message: 'hello man',
-    receiverId: 12,
+    receiverId: 1,
   },
 };

@@ -16,7 +16,7 @@
   "author": "Verdotte Aututu",
   "license": "ISC",
   "devDependencies": {
-    "coveralls": "^3.0.9",
+    "coveralls": "^3.1.0",
     "cross-env": "^7.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",

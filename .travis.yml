@@ -1,0 +1,12 @@
+language: node_js
+node_js: '10.15.1'
+cache:
+directories:
+  - node_modules
+services:
+  - postgresql
+before_script:
+  - npm install
+  - psql -c 'create database test_chat_db;' -U postgres
+after_script:
+  - npm install coveralls && npm run coverage

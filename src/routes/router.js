@@ -1,5 +1,7 @@
 /* eslint-disable prefer-destructuring */
 
+import { HTTP_NOT_FOUND } from '../constants/httpStatusCodes';
+
 /**
  * Extract posted data from request body
  * @param req
@@ -51,7 +53,7 @@ const router = async (req, res, routes) => {
     return route.handler(req, res, param, body);
   }
 
-  return 'Error';
+  return Response.error(res, HTTP_NOT_FOUND, 'Endpoint not found');
 };
 
 export default router;

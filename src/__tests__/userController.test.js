@@ -1,7 +1,7 @@
 /* eslint-disable jest/no-test-callback */
 import request from 'supertest';
 import app from '../app';
-import { userData } from '../__mocks__/dummyData';
+import { userData, chatData } from '../__mocks__/dummyData';
 
 import {
   HTTP_CREATED,
@@ -95,6 +95,6 @@ describe('User Authentication Test', () => {
   });
 
   afterAll(async () => {
-    await Service.User.truncateTabl('users');
+    await Service.User.truncateTable('users');
   });
 });
