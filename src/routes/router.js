@@ -1,6 +1,9 @@
 /* eslint-disable prefer-destructuring */
 
-import { HTTP_NOT_FOUND } from '../constants/httpStatusCodes';
+import {
+  HTTP_NOT_FOUND,
+  HTTP_SERVER_ERROR,
+} from '../constants/httpStatusCodes';
 
 /**
  * Extract posted data from request body
@@ -47,7 +50,11 @@ const router = async (req, res, routes) => {
   if (route) {
     let body = null;
     if (req.method === 'POST' || req.method === 'PUT') {
-      body = await getPostData(req);
+      try {
+        body = await getPostData(req);
+      } catch (error) {
+        Response.error(res, HTTP_SERVER_ERROR, error.message);
+      }
     }
 
     return route.handler(req, res, param, body);
