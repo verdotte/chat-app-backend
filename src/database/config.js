@@ -19,7 +19,7 @@ const pool = new Pool({
   database: NODE_ENV === 'development' ? DEV_DB : TEST_DB,
   password: DB_PASSWORD,
   port: DB_PORT,
-  ssl: true,
+  ssl: { rejectUnauthorized: false },
 });
 
 export default pool;
