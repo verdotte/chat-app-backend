@@ -48,6 +48,7 @@ class ChatController {
    *
    * @param {*} req
    * @param {*} res
+   * @param {*} param
    * @returns {object} res
    * @memberof ChatController
    */
