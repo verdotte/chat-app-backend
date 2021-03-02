@@ -101,7 +101,7 @@ const dropAllTables = () => {
   dropChatTable();
 };
 
-pool.end(() => {
+pool.on('remove', () => {
   console.log('client removed');
   process.exit(0);
 });
