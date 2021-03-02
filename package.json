@@ -11,6 +11,7 @@
     "prestart": "npm-run-all create-tables",
     "start": "babel-node dist/index.js",
     "pretest": "cross-env NODE_ENV=test npm-run-all drop-tables && cross-env NODE_ENV=test npm-run-all create-tables",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "test": "cross-env NODE_ENV=test jest --coverage --runInBand --detectOpenHandles --forceExit"
   },
   "author": "Verdotte Aututu",
